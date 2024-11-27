@@ -1,4 +1,23 @@
-.footer {
+.contatosFooter {
     background-color: #005695;
     height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+
+    nav{
+        width: 11%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+.copyright{
+    height: 6vh;
+    color: #fff;
+    background-color: #232020;
+    display: flex;
+    justify-content: center;
 }
