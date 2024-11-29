@@ -62,3 +62,21 @@
         border: none;
         cursor: pointer;
     }
+
+
+@media (max-width: 750px){
+    .header {
+        height: 20vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .logoHeader{
+        width: 90%;
+    }
+    .navHeader{
+        width: 95%;
+    }
+    .barraDeBusca{
+        display: none;
+    }
+}
