@@ -3,6 +3,7 @@
     height: 15vh;
     display: flex;
     justify-content: space-around;
+    padding: 0 3%;
     align-items: center;
     color: #fff;
 
@@ -20,4 +21,22 @@
     background-color: #232020;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 800px){
+    .contatosFooter{
+        flex-direction: column;
+
+        nav{
+            width: 60%;
+        }
+    }
+    .copyright{
+        p{
+            font-size: 12px;
+            width: 60%;
+            text-align: center;
+        }
+    }
 }
