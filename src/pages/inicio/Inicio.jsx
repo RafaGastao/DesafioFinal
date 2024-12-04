@@ -1,8 +1,8 @@
 import s from './inicio.module.scss'
-import oferece from '../../assets/Imagem1.png'
-import garante from '../../assets/Imagem2.png'
-import estimula from '../../assets/Imagem3.png'
-import fornece from '../../assets/Imagem4.png'
+import oferece from '../../assets/imagem1.png'
+import garante from '../../assets/imagem2.png'
+import estimula from '../../assets/imagem3.png'
+import fornece from '../../assets/imagem4.png'
 
 export default function Inicio(){
     return(

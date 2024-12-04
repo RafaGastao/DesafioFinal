@@ -1,6 +1,6 @@
-import Header from './components/Header/Header'
+import Header from './components/header/Header'
 import './globalStyle/globalStyle.scss'
-import Footer from './components/Footer/Footer'
+import Footer from './components/footer/Footer'
 
 export default function App(){
   return(
