@@ -13,6 +13,27 @@ export default function LivrosDoados(){
         setLivros(resposta.data)
     }
 
+    const excluirLivro = async (id) => {
+        if (!id) {
+            alert("Erro: ID do livro não encontrado.");
+            return;
+        }
+
+        const confirmacao = window.confirm("Tem certeza que deseja excluir este livro?");
+        if (!confirmacao) return;
+
+        try {
+            const resposta = await axios.delete(`https://api-z849.onrender.com/livros/${id}`);
+            console.log("Resposta da API ao excluir:", resposta); 
+            alert("Livro excluído com sucesso!");
+            puxarLivros(); 
+        } catch (error) {
+            console.error("Erro ao excluir o livro:", error.response ? error.response.data : error);
+            alert("Erro ao excluir o livro.");
+        }
+    };
+
+
   useEffect(()=>{
       puxarLivros()
   },[])
@@ -26,6 +47,7 @@ export default function LivrosDoados(){
                   <img src={item.image_url} alt={item.titulo} />
               <div>
               <h3>{item.titulo}</h3>
+              <button onClick={() => excluirLivro(item.id)}>Excluir</button>
               </div>
               </section>
              ))}
