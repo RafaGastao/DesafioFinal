@@ -9,8 +9,10 @@ export default function LivrosDoados(){
 
     const puxarLivros = async() =>{
         const resposta = await  axios.get("https://api-z849.onrender.com/livros")
-        setLivros(resposta.data.livros)
+        console.log(resposta)
+        setLivros(resposta.data)
     }
+
   useEffect(()=>{
       puxarLivros()
   },[])
@@ -19,14 +21,14 @@ export default function LivrosDoados(){
         <section className={s.livrosDoadosSection}>
           <h2>Livros Doados</h2>
           <section className={s.containerCards}>
-             <section>
-                <img src={livroProtagonista} alt="imagem do livro O Protagonista" />
-                <div>
-                <h3>O protagonista</h3>
-                <p>Susanne Andrade</p>
-                <p>Ficção</p>
-                </div>
-             </section>
+             {livros.map((item) =>(
+              <section>
+                  <img src={item.image_url} alt={item.titulo} />
+              <div>
+              <h3>{item.titulo}</h3>
+              </div>
+              </section>
+             ))}
           </section>
         </section>
     )

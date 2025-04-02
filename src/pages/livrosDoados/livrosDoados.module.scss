@@ -11,8 +11,13 @@
 }
 
 .containerCards{
-    width: 95%;
-    height: 60vh;
+    width: 75%;
+    height: 50vh;
+    gap: 25px;
+    display: flex;
+    img{
+        width: 7vw;
+    }
     
     section{
         border: solid 3px #005695;
