@@ -68,3 +68,33 @@ input{
         }
     }
 }
+
+.loadingModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .loadingModal img {
+    width: 60px;
+    margin-bottom: 10px;
+    animation: spin 1.5s infinite linear;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

@@ -2,6 +2,7 @@ import livroProtagonista from '../../assets/livroProtagonista.png'
 import s from './livrosDoados.module.scss'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
+import lixeira from '../../assets/lixeira.png'
 
 export default function LivrosDoados(){
 
@@ -43,7 +44,10 @@ export default function LivrosDoados(){
           <h2>Livros Doados</h2>
           <section className={s.containerCards}>
              {livros.map((item) =>(
-              <section>
+              <section key ={item.id} className={s.card}>
+                <button className={s.botaoExcluir} onClick={() => excluirLivro(item.id)}>
+                    <img src={lixeira} alt="Excluir" />
+                </button>
                   <img src={item.image_url} alt={item.titulo} />
               <div>
               <h3>{item.titulo}</h3>
