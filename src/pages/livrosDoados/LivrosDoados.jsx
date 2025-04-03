@@ -51,7 +51,6 @@ export default function LivrosDoados(){
                   <img src={item.image_url} alt={item.titulo} />
               <div>
               <h3>{item.titulo}</h3>
-              <button onClick={() => excluirLivro(item.id)}>Excluir</button>
               </div>
               </section>
              ))}

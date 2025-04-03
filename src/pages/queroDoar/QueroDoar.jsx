@@ -8,7 +8,7 @@ export default function QueroDoar() {
   const [categoria, setCategoria] = useState("");
   const [autor, setAutor] = useState("");
   const [image_url, setImage_url] = useState("");
-  const [loading, setLoading] = useState(false); // Estado para tela de carregamento
+  const [loading, setLoading] = useState(false); 
 
   const capturaTitulo = (e) => setTitulo(e.target.value);
   const capturaCategoria = (e) => setCategoria(e.target.value);
@@ -16,7 +16,7 @@ export default function QueroDoar() {
   const capturaImg = (e) => setImage_url(e.target.value);
 
   const envioDados = async () => {
-    setLoading(true); // Ativa o carregamento
+    setLoading(true); 
 
     const dadosPEnviar = {
       titulo,
@@ -31,7 +31,7 @@ export default function QueroDoar() {
     } catch (error) {
       alert("Erro ao doar o livro!");
     } finally {
-      setLoading(false); // Desativa o carregamento após a resposta
+      setLoading(false); 
     }
   };
 
